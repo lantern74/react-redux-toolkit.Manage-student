@@ -288,7 +288,7 @@ td {
 
 .list-table {
   height: calc(100vh - 120px);
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .list-table tbody tr td:first-child {
