@@ -316,6 +316,10 @@ td {
   font-weight: 700;
 }
 
+.MuiDialogContent-root {
+  min-width: 376px;
+}
+
 @media (max-width: 1230px) {
   .detail-card {
     display: flex;

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Button, Avatar } from "@mui/material";
 import AddStudent from "../AddStudent";
 import DeleteStudent from "../DeleteStudent";
+import EditStudent from "../EditStudent";
 import { useGetStudentsQuery } from "../../redux/studentApi";
 import { useNavigate } from "react-router-dom";
 import Header from "./Header";
@@ -14,6 +15,8 @@ interface Student {
 function List() {
     const [open, setOpen] = useState(false);
     const [deleteOpen, setDeleteOpen] = useState(false);
+    const [editOpen, setEditOpen] = useState(false);
+
     const [selectedStudent, setSelectedStudent] = useState<Student | null>(null);
     const [search, setSearch] = useState("");
 
@@ -37,6 +40,15 @@ function List() {
     const handleDeleteClose = () => {
         setSelectedStudent(null);
         setDeleteOpen(false);
+    };
+
+    const handleEditOpen = (student: Student) => {
+        setSelectedStudent(student);
+        setEditOpen(true);
+    };
+    const handleEditClose = () => {
+        setSelectedStudent(null);
+        setEditOpen(false);
     };
 
     const handleRowClick = (studentId: number) => {
@@ -100,7 +112,7 @@ function List() {
                                 <Button
                                     onClick={(e) => {
                                         e.stopPropagation();
-                                        // handleDeleteOpen(student);
+                                        handleEditOpen(student);
                                     }}
                                 >
                                     <img src="image/edit.svg" alt="edit" />
@@ -129,6 +141,14 @@ function List() {
                     <DeleteStudent
                     open={deleteOpen}
                     handleClose={handleDeleteClose}
+                    student={selectedStudent}
+                    />
+                )}
+
+                {selectedStudent && (
+                    <EditStudent
+                    open={editOpen}
+                    handleClose={handleEditClose}
                     student={selectedStudent}
                     />
                 )}

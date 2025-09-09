@@ -72,6 +72,32 @@ export const studentApi = createApi({
       },
     }),
 
+    //Update student
+    updateStudent: builder.mutation<Student, Partial<Student>>({
+      query: (student) => ({
+        url: `/users/${student.id}`,
+        method: "PATCH",
+        body: student,
+      }),
+      async onQueryStarted(student, { dispatch, queryFulfilled }) {
+        const patchResult = dispatch(
+          studentApi.util.updateQueryData("getStudents", undefined, (draft) => {
+            const index = draft.findIndex((s) => s.id === student.id);
+            if (index !== -1) {
+              draft[index] = { ...draft[index], ...student };
+            }
+          })
+        );
+
+        try {
+          await queryFulfilled;
+        } catch {
+          patchResult.undo();
+        }
+      },
+    }),
+
+
   }),
 });
 
@@ -79,4 +105,5 @@ export const {
   useGetStudentsQuery,
   useAddStudentMutation,
   useDeleteStudentMutation,
+  useUpdateStudentMutation,
 } = studentApi;
