@@ -34,7 +34,7 @@ function Sidebar() {
                 <Typography sx={{fontSize: '14px', color: '#feaf00', marginTop: '8px'}}>Admin</Typography> 
             </div>
             <div className='sidebar-navlink'>
-                <Button variant="contained" className='sign-in-button' sx={{color: 'black', textAlign:'center', gap:"10px"}}>
+                <Button variant="contained" className='sign-in-button' sx={{color: 'black', textAlign:'center', gap:"10px", textTransform: 'none'}}>
                     <div>
                         <Avatar 
                             src={university}
@@ -46,10 +46,10 @@ function Sidebar() {
                             }}
                         />
                     </div>
-                    <Typography variant="body2" sx={{textTransform: 'lowercase'}}>Students</Typography>
+                    <Typography variant="body2">Students</Typography>
                 </Button>
-                <Button onClick={removeToken} className='sidebar-logout'>
-                    <Typography variant="body2" sx={{ textTransform: 'lowercase', color: 'black' }}>Logout</Typography>
+                <Button onClick={removeToken} className='sidebar-logout' sx={{textTransform: 'none'}}>
+                    <Typography variant="body2" sx={{ color: 'black' }}>Logout</Typography>
                     <img src={logout} alt="logout" />
                 </Button>
             </div>
