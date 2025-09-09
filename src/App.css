@@ -1,0 +1,354 @@
+#root {
+  width: 100%;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+
+.sign {
+  background: linear-gradient(to right, #feaf00, #f8d442);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  color: #6c6c6c;
+}
+.sign-in {
+  width: 475px;
+  background-color: white;
+  border-radius: 20px;
+}
+.sign-in-div {
+  padding: 40px;
+}
+.sign-in-logo {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.sign-in-logo-bar {
+  background-color: #f8d442;
+  width: 6px;
+  height: 40px;
+}
+.sign-in-logo-text {
+  font-weight: 700;
+  font-size: 32px;
+  color: black;
+  text-align: center;
+}
+.sign-in-boldtext {
+  text-align: center;
+  font-weight: 600;
+  font-size: 22px;
+  margin-top: 40px !important;
+  color: black;
+}
+.sign-in-normaltext {
+  text-align: center;
+  color: #6c6c6c;
+  margin-bottom: 40px !important;
+}
+.sign-in-input {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+.sign-in-input p {
+  margin-bottom: 5px;
+}
+.sign-input {
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid #e5e5e5;
+}
+.sign-input::placeholder {
+  color: #cdcdcd;
+  font-size: 12px !important;
+}
+.marginTop {
+  margin-top: 20px;
+}
+.sign-in-button {
+  width: 100%;
+  background-color: #feaf00 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-top: 30px !important;
+  border:none !important;
+  padding: 10px 0;
+  border-radius: 4px;
+  box-shadow: none !important;
+}
+.sign-in-register {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 5px;
+}
+.sign-in-register-link {
+  color: #feaf00;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.dashboard-content {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sidebar-content {
+  padding: 20px;
+  background-color: #f2eae1;
+  height: 100vh;
+}
+.sidebar-flex {
+  display: flex;
+  flex-direction: column; 
+}
+
+.dashboard-logo {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.dashboard-logo-bar {
+  background-color: #f8d442;
+  width: 4px;
+  height: 24px;
+}
+.dashboard-logo-text {
+  font-weight: 700;
+  font-size: 20px;
+  color: black;
+  text-align: center;
+  white-space: nowrap;
+}
+.sidebar-profile {
+  text-align: center;
+  margin-top: 50px;
+}
+.sidebar-profile-image {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.sidebar-navlink {
+  margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+.sidebar-logout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+  position: absolute !important;
+  bottom: 80px;
+}
+
+.header {
+  background-color: white;
+  display: flex;
+  justify-content: end;
+  padding: 10px 30px;
+}
+.detail-header {
+  background-color: white;
+  display: flex;
+  justify-content: start;
+  padding: 18px 30px;
+}
+.header-search {
+  width: 200px;
+  position: relative;
+}
+.search-avatar {
+  position: absolute;
+  right: 16px;
+  top: 12px;
+}
+
+.list-content {
+  background-color: #f8f8f8;
+  padding: 0 30px;
+  position: relative;
+  z-index: 2;
+}
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+.list-line {
+  width: 100%;
+  height: 1px;
+  background-color: #e5e5e5;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; 
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+
+.dialog {
+  padding: 20px;
+}
+.css-1cennmq-MuiBackdrop-root-MuiDialog-backdrop {
+  background-color: rgba(0, 0, 0, 0.1) !important;
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  width: 100%;
+}
+
+th, td {
+  padding: 12px 0;
+  text-align: left;
+  vertical-align: middle;
+}
+
+th {
+  background-color: #f8f8f8;
+  color: #acacac;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+tr {
+  background-color: #fff;
+  overflow: hidden; 
+}
+
+td {
+  padding: 12px 0;
+}
+
+.crud {
+  cursor: pointer;
+  width: 20px;
+}
+
+.crud button:hover {
+  background-color: #fff;
+}
+
+.list-table {
+  height: calc(100vh - 120px);
+  overflow-y: scroll;
+}
+
+.list-table tbody tr td:first-child {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.list-table tbody tr td:last-child {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.detail-card {
+  display: flex;
+  gap: 30px;
+  padding: 30px;
+}
+.detailCard {
+  width: 250px;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.detail-card-value {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+@media (max-width: 1230px) {
+  .detail-card {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1230px) {
+  .detail-card {
+    display: flex;
+    flex-direction: column;
+  }
+  .list-table {
+    overflow-x: scroll;
+  }
+}
+
+@media (max-width: 768px) {
+  .sign-in-div {
+    padding: 30px 20px;
+  }
+  .detail-header {
+    justify-content: right;
+  }
+  .list-header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .list-content {
+    padding: 0 10px;
+  }
+  th {
+    padding: 0;
+  }
+}
